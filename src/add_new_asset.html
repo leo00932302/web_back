@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Obsidian Capital | Add New Asset</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-secondary": "#23323b",
+            "secondary": "#b9c9d3",
+            "surface-bright": "#343a3c",
+            "surface-tint": "#2ddbde",
+            "inverse-primary": "#00696b",
+            "error-container": "#93000a",
+            "surface": "#0e1416",
+            "on-primary-fixed-variant": "#004f51",
+            "on-tertiary-fixed-variant": "#005227",
+            "on-primary-fixed": "#002020",
+            "on-surface": "#dee3e6",
+            "surface-variant": "#303638",
+            "tertiary": "#66dd8b",
+            "on-error": "#690005",
+            "on-primary": "#003738",
+            "surface-container-lowest": "#090f11",
+            "primary": "#2ddbde",
+            "tertiary-fixed": "#83fba5",
+            "tertiary-fixed-dim": "#66dd8b",
+            "primary-fixed": "#5af8fb",
+            "on-secondary-fixed-variant": "#3a4951",
+            "surface-container": "#1a2123",
+            "surface-dim": "#0e1416",
+            "on-secondary-container": "#abbbc5",
+            "on-tertiary-fixed": "#00210c",
+            "secondary-container": "#3c4b54",
+            "on-tertiary-container": "#4fc777",
+            "primary-container": "#004c4d",
+            "on-surface-variant": "#bfc8ca",
+            "primary-fixed-dim": "#2ddbde",
+            "on-primary-container": "#00c4c7",
+            "surface-container-low": "#161d1f",
+            "surface-container-highest": "#303638",
+            "on-secondary-fixed": "#0e1d25",
+            "background": "#0e1416",
+            "on-background": "#dee3e6",
+            "on-tertiary": "#003919",
+            "outline": "#8a9295",
+            "secondary-fixed-dim": "#b9c9d3",
+            "inverse-on-surface": "#2b3134",
+            "outline-variant": "#40484a",
+            "inverse-surface": "#dee3e6",
+            "error": "#ffb4ab",
+            "surface-container-high": "#252b2d",
+            "on-error-container": "#ffdad6",
+            "tertiary-container": "#004f25",
+            "secondary-fixed": "#d5e5f0"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "fontFamily": {
+            "headline": ["Manrope"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .glass-effect {
+      background: rgba(48, 54, 56, 0.8);
+      backdrop-filter: blur(20px);
+    }
+    body {
+      background-color: #0e1416;
+      color: #dee3e6;
+    }
+  </style>
+</head>
+<body class="font-body selection:bg-primary/30">
+<nav class="w-full sticky top-0 z-50 bg-[#0e1416]/80 backdrop-blur-xl border-b border-[#2ddbde]/15 shadow-[0_0_20px_rgba(45,219,222,0.04)]">
+<div class="flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-8">
+<span class="text-xl font-bold tracking-tight text-[#2ddbde] font-headline">Obsidian Capital</span>
+<div class="hidden md:flex items-center gap-6 font-manrope text-sm font-medium">
+<span class="text-[#2ddbde] font-bold border-b-2 border-[#2ddbde] cursor-pointer active:scale-95 py-5">Dashboard</span>
+<span class="text-slate-400 font-medium hover:text-[#2ddbde] transition-colors duration-200 cursor-pointer active:scale-95 py-5">Markets</span>
+<span class="text-slate-400 font-medium hover:text-[#2ddbde] transition-colors duration-200 cursor-pointer active:scale-95 py-5">Portfolio</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-slate-400 font-medium hover:text-[#2ddbde] transition-colors duration-200 cursor-pointer text-sm">Support</span>
+<span class="material-symbols-outlined text-slate-400 hover:text-[#2ddbde] cursor-pointer transition-colors" data-icon="search">search</span>
+<span class="material-symbols-outlined text-slate-400 hover:text-[#2ddbde] cursor-pointer transition-colors" data-icon="notifications">notifications</span>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest overflow-hidden border border-outline-variant/30">
+<img class="w-full h-full object-cover" data-alt="close-up portrait of a professional male user in soft studio lighting with a neutral gray background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlCrtBIMP-p2wrg6LO0iKjAyBjuUSkzP4QLO5sIi72nC9OVEU60qgww-XLvi9HPppV4lwZZk-Eq_UPozzI9wHnBd8elWeosoaSFVx45Njj_VMBKBZhJcn2l7RAuGey2rJ_4u_Sd5YZO4LqUDchjnjqKC2i1yNsLjxTqQnKzKgXZnBkmgvuRi4qYD1EdTPRV_Agf4wLFdwepyADqPAL-szCGwfjU-VlzAM7sCFdutbtu_LE-LdN4jZnb92uk-yjIxzrCoSmmaULUfc"/>
+</div>
+</div>
+</div>
+</nav>
+<aside class="h-screen w-64 fixed left-0 top-0 bg-[#0e1416] border-r border-[#2ddbde]/15 flex flex-col py-6 hidden lg:flex z-40">
+<div class="px-6 mb-10">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary text-sm" data-icon="token" style="font-variation-settings: 'FILL' 1;">token</span>
+</div>
+<div>
+<p class="font-manrope font-black text-[#2ddbde] text-lg leading-tight uppercase tracking-widest">The Pulse</p>
+<p class="text-[10px] text-slate-500 font-medium uppercase tracking-tighter">Institutional Grade</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-1 flex-grow">
+<div class="bg-[#004c4d] text-[#2ddbde] rounded-lg mx-3 px-4 py-3 flex items-center gap-3 cursor-pointer active:scale-[0.98] transition-transform">
+<span class="material-symbols-outlined text-[20px]" data-icon="dashboard">dashboard</span>
+<span class="font-manrope text-sm font-semibold">Dashboard</span>
+</div>
+<div class="text-slate-400 mx-3 px-4 py-3 flex items-center gap-3 hover:bg-[#004c4d]/50 hover:text-[#2ddbde] transition-all cursor-pointer active:scale-[0.98]">
+<span class="material-symbols-outlined text-[20px]" data-icon="account_balance_wallet">account_balance_wallet</span>
+<span class="font-manrope text-sm">Portfolio</span>
+</div>
+<div class="text-slate-400 mx-3 px-4 py-3 flex items-center gap-3 hover:bg-[#004c4d]/50 hover:text-[#2ddbde] transition-all cursor-pointer active:scale-[0.98]">
+<span class="material-symbols-outlined text-[20px]" data-icon="settings">settings</span>
+<span class="font-manrope text-sm">Settings</span>
+</div>
+</div>
+<div class="px-3 mt-auto">
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 mb-6 hover:brightness-110 transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+<span class="font-manrope text-sm uppercase tracking-wider">Trade Now</span>
+</button>
+<div class="flex flex-col gap-1 border-t border-outline-variant/10 pt-4">
+<div class="text-slate-400 px-4 py-2 flex items-center gap-3 hover:text-primary transition-colors cursor-pointer text-sm">
+<span class="material-symbols-outlined text-[18px]" data-icon="help">help</span>
+<span>Help</span>
+</div>
+<div class="text-slate-400 px-4 py-2 flex items-center gap-3 hover:text-error transition-colors cursor-pointer text-sm">
+<span class="material-symbols-outlined text-[18px]" data-icon="logout">logout</span>
+<span>Sign Out</span>
+</div>
+</div>
+</div>
+</aside>
+<main class="lg:pl-64 min-h-screen relative">
+<div class="p-8 filter blur-[4px]">
+<div class="mb-8">
+<h1 class="text-3xl font-headline font-extrabold text-on-surface">Equity Overview</h1>
+<p class="text-on-surface-variant font-body">Market performance and asset allocation.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+<div class="bg-surface-container-high p-6 rounded-xl border border-outline-variant/10">
+<p class="text-sm text-on-surface-variant font-medium mb-1">Total Net Worth</p>
+<p class="text-3xl font-headline font-bold text-primary">$1,248,500.00</p>
+<div class="mt-4 flex items-center gap-2">
+<span class="text-tertiary flex items-center text-xs font-semibold">
+<span class="material-symbols-outlined text-sm" data-icon="trending_up">trending_up</span> +2.4%
+            </span>
+<span class="text-on-surface-variant text-[10px] uppercase">vs last month</span>
+</div>
+</div>
+<div class="bg-surface-container-high p-6 rounded-xl border border-outline-variant/10">
+<p class="text-sm text-on-surface-variant font-medium mb-1">Active Positions</p>
+<p class="text-3xl font-headline font-bold text-on-surface">24</p>
+<div class="mt-4 flex items-center gap-2">
+<span class="text-tertiary text-xs font-semibold">6 New</span>
+<span class="text-on-surface-variant text-[10px] uppercase">This week</span>
+</div>
+</div>
+<div class="bg-surface-container-high p-6 rounded-xl border border-outline-variant/10 overflow-hidden relative">
+<div class="relative z-10">
+<p class="text-sm text-on-surface-variant font-medium mb-1">Realized P/L</p>
+<p class="text-3xl font-headline font-bold text-tertiary">+$14,202</p>
+</div>
+<div class="absolute bottom-0 right-0 w-32 h-16 opacity-30">
+<img class="w-full h-full object-cover" data-alt="a glowing green line graph showing an upward trend against a dark digital background with subtle grain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC62QVEkpFGYDXAZZ2ocl9nYke-6YORQdsiPiS_G_pExPvABCxK9Y8O4-UZSucF5rihxRNjJeCHs6WrUWPYj6FSPxZrmdTDkv3Bbi9yaSNAAa2puQ0SmO3sZP_FFJq_LbIuxKes-zlY0ozaMnS09I9xxl2SsbgL3De947iqMgiEEk-_tVNmRa8SPhIea2kTrSYGfTHjUXa0HMry8pFDhiDos4S7oBos2gGeiDjkq2dcDI9ACUTv61NDNYNaSSKO4jmaLoRCAxFOf_A"/>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-6 mb-8 border border-outline-variant/5">
+<div class="flex justify-between items-center mb-6">
+<h2 class="font-headline font-bold text-xl">Top Holdings</h2>
+<span class="text-primary text-sm font-medium cursor-pointer">View All Assets</span>
+</div>
+<div class="space-y-4">
+<div class="flex items-center justify-between p-4 hover:bg-surface-container-highest rounded-lg transition-colors group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center border border-outline-variant/20">
+<span class="material-symbols-outlined text-primary" data-icon="monitoring">monitoring</span>
+</div>
+<div>
+<p class="font-semibold text-on-surface">NVDA</p>
+<p class="text-xs text-on-surface-variant">NVIDIA Corp.</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-headline font-bold">$42,500.00</p>
+<p class="text-xs text-tertiary">+12.4%</p>
+</div>
+</div>
+<div class="flex items-center justify-between p-4 hover:bg-surface-container-highest rounded-lg transition-colors group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center border border-outline-variant/20">
+<span class="material-symbols-outlined text-primary" data-icon="account_balance">account_balance</span>
+</div>
+<div>
+<p class="font-semibold text-on-surface">AAPL</p>
+<p class="text-xs text-on-surface-variant">Apple Inc.</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-headline font-bold">$38,120.50</p>
+<p class="text-xs text-tertiary">+0.8%</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-background/40 backdrop-blur-sm px-4">
+<div class="w-full max-w-lg glass-effect rounded-2xl border border-[#2ddbde]/20 shadow-2xl p-8 transform transition-all">
+<div class="flex justify-between items-start mb-8">
+<div>
+<h2 class="text-2xl font-headline font-extrabold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+              Add New Asset
+            </h2>
+<p class="text-on-surface-variant text-sm mt-1">Initialize a new position in your institutional portfolio.</p>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+<form class="space-y-6">
+<div>
+<label class="block text-xs font-bold uppercase tracking-widest text-primary mb-2" for="ticker">Stock Symbol / Ticker</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-on-surface-variant text-lg" data-icon="tag">tag</span>
+</div>
+<input class="w-full bg-surface-container-lowest border-0 border-b-2 border-outline-variant focus:border-primary focus:ring-0 text-on-surface placeholder-on-surface-variant/40 pl-12 py-4 rounded-t-lg transition-all" id="ticker" placeholder="e.g. AAPL" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-xs font-bold uppercase tracking-widest text-primary mb-2" for="shares">Number of Shares</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-on-surface-variant text-lg" data-icon="layers">layers</span>
+</div>
+<input class="w-full bg-surface-container-lowest border-0 border-b-2 border-outline-variant focus:border-primary focus:ring-0 text-on-surface placeholder-on-surface-variant/40 pl-12 py-4 rounded-t-lg transition-all" id="shares" placeholder="0.00" type="number"/>
+</div>
+</div>
+<div>
+<label class="block text-xs font-bold uppercase tracking-widest text-primary mb-2" for="price">Purchase Price per Share</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-on-surface-variant text-lg" data-icon="attach_money">attach_money</span>
+</div>
+<input class="w-full bg-surface-container-lowest border-0 border-b-2 border-outline-variant focus:border-primary focus:ring-0 text-on-surface placeholder-on-surface-variant/40 pl-12 py-4 rounded-t-lg transition-all" id="price" placeholder="0.00" type="number"/>
+</div>
+</div>
+</div>
+<div class="pt-4">
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold py-5 rounded-xl flex items-center justify-center gap-3 hover:brightness-110 active:scale-[0.98] transition-all shadow-lg shadow-primary/10" type="submit">
+<span class="material-symbols-outlined" data-icon="data_saver_on" style="font-variation-settings: 'FILL' 1;">data_saver_on</span>
+<span class="font-headline tracking-wider uppercase text-sm">Add to Portfolio</span>
+</button>
+</div>
+</form>
+<div class="mt-8 pt-6 border-t border-outline-variant/10">
+<div class="bg-primary/5 p-4 rounded-xl flex items-start gap-4">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="info">info</span>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+              Real-time market valuation will be calculated immediately upon adding the asset. Historical performance data will sync within the next 24 hours.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<div class="fixed bottom-0 left-0 right-0 h-10 glass-effect border-t border-[#2ddbde]/10 z-30 flex items-center overflow-hidden px-4">
+<div class="flex items-center gap-8 whitespace-nowrap text-[10px] font-bold tracking-widest uppercase text-on-surface-variant/60 animate-marquee">
+<span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> BTC/USD $68,241.50 (+1.2%)</span>
+<span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-error"></span> ETH/USD $3,522.10 (-0.4%)</span>
+<span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> SPY $512.20 (+0.8%)</span>
+<span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> QQQ $445.12 (+1.5%)</span>
+<span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-error"></span> GOLD $2,341.00 (-0.2%)</span>
+<span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> TSLA $175.40 (+4.2%)</span>
+</div>
+</div>
+</body></html>
